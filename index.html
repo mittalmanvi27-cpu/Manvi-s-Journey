@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manvi Mittal — Full Stack Software Engineer</title>
+  <meta name="description" content="Manvi Mittal — Full Stack Software Engineer building web apps, REST APIs and machine-learning services with React, Next.js, TypeScript, Node.js, Python and SQL." />
+  <meta name="theme-color" content="#09090b" />
+  <meta property="og:title" content="Manvi Mittal — Full Stack Software Engineer" />
+  <meta property="og:description" content="Selected work, experience and an AI assistant that answers from my résumé." />
+  <meta property="og:image" content="assets/manvi.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2309090b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23c6f24e' font-family='monospace' font-weight='700'>m_</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/manvi.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></g></symbol>
+  </svg>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="bg" aria-hidden="true"><div class="bg__grid"></div><div class="bg__glow"></div></div>
+  <div class="spot" aria-hidden="true"></div>
+  <div class="cursor-label" id="cursorLabel" aria-hidden="true">view</div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Home"><span class="prompt">~/</span>manvi<span class="caret">_</span></a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#about"><i>01</i>about</a>
+      <a href="#work"><i>02</i>work</a>
+      <a href="#experience"><i>03</i>experience</a>
+      <a href="#education"><i>04</i>education</a>
+      <a href="#pinboard"><i>05</i>pinboard</a>
+      <a href="#ai"><i>06</i>ask-ai</a>
+      <a href="#contact"><i>07</i>contact</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light / dark">
+        <svg class="i-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a href="assets/Manvi_Mittal_Resume.pdf" class="btn btn--ghost btn--sm hide-sm" download>Résumé <span class="mono">↓</span></a>
+      <a href="mailto:manviamittal7@gmail.com" class="btn btn--accent btn--sm magnetic">Hire me</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__copy">
+        <a href="#contact" class="status reveal"><span class="pulse"></span>Open to full-time roles<span class="status__sep">·</span><span class="mono" id="clock">IST</span></a>
+        <h1 class="hero__title">
+          <span class="line"><span class="word">Manvi Mittal</span></span>
+          <span class="line"><span class="word muted">Full stack <span class="serif">engineer.</span></span></span>
+        </h1>
+        <p class="hero__sub reveal">I build web apps, REST APIs and machine-learning services with <b>React, Next.js, TypeScript, Node.js, Python</b> and <b>SQL</b> — currently shipping calibration and inspection platforms at <b>Ezentech India</b>.</p>
+        <div class="hero__cta reveal">
+          <a href="#work" class="btn btn--accent magnetic">See my work <span class="kbd">↓</span></a>
+          <a href="assets/Manvi_Mittal_Resume.pdf" class="btn btn--ghost magnetic" download>Download résumé</a>
+          <a href="https://github.com/mittalmanvi27-cpu" class="icon-btn icon-btn--lg" target="_blank" rel="noopener" aria-label="GitHub"><svg width="18" height="18"><use href="#i-gh"/></svg></a>
+          <a href="https://linkedin.com/in/mittalmanvi" class="icon-btn icon-btn--lg" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
+        </div>
+        <ul class="stats reveal">
+          <li><b><span data-count="60">0</span>%</b><span>fewer missed calibration schedules</span></li>
+          <li><b><span data-count="55">0</span>%</b><span>lower end-to-end processing time</span></li>
+          <li><b>86.4%</b><span>test accuracy on my ML classifier</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__me reveal">
+        <figure class="portrait">
+          <img src="assets/manvi.jpg" alt="Portrait of Manvi Mittal" width="463" height="653" />
+          <span class="portrait__corner portrait__corner--tl"></span><span class="portrait__corner portrait__corner--br"></span>
+          <figcaption class="portrait__cap mono"><span class="pulse"></span>manvi.jpg · Saharanpur, IN</figcaption>
+        </figure>
+        <div class="idcard" aria-label="Quick facts">
+          <div class="idcard__bar mono"><span class="dots"><i></i><i></i><i></i></span>whoami.json</div>
+<pre class="mono">{
+  <span class="k">"name"</span>: <span class="s">"Manvi Mittal"</span>,
+  <span class="k">"role"</span>: <span class="s">"Full Stack Engineer"</span>,
+  <span class="k">"now"</span>: <span class="s">"Ezentech India"</span>,
+  <span class="k">"stack"</span>: [<span class="s">"Next.js"</span>, <span class="s">"TS"</span>,
+            <span class="s">"Node"</span>, <span class="s">"Python"</span>],
+  <span class="k">"open_to_work"</span>: <span class="b">true</span>
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech marquee -->
+    <div class="marquee" aria-label="Tech stack">
+      <div class="marquee__track">
+        <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>Python</span><span>FastAPI</span><span>scikit-learn</span><span>Java</span><span>MySQL</span><span>MongoDB</span><span>Docker</span><span>Azure</span><span>Gemini API</span><span>Vercel</span>
+        <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>Python</span><span>FastAPI</span><span>scikit-learn</span><span>Java</span><span>MySQL</span><span>MongoDB</span><span>Docker</span><span>Azure</span><span>Gemini API</span><span>Vercel</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="about">
+        <figure class="about__photo reveal">
+          <img src="assets/manvi-blazer.jpg" alt="Manvi Mittal" loading="lazy" width="809" height="1280" />
+          <figcaption class="mono">hello, world 👋</figcaption>
+        </figure>
+        <div class="about__text">
+          <p class="label reveal">01 — about</p>
+          <h2 class="reveal">Hi, I'm <span class="serif">Manvi.</span></h2>
+          <div class="about__body reveal">
+            <p>I'm a full stack software engineer with a year of experience building production web applications and REST APIs.</p>
+            <p>At <b>Ezentech India</b> I build the calibration monitoring and digital inspection platforms that replaced spreadsheets and paper checks for operations teams. On my own time I build end-to-end projects — an explainable ML classifier served with FastAPI, a Gemini-powered assistant, and a production Next.js site.</p>
+            <p>I care about developer experience, performance and code that's easy to maintain.</p>
+          </div>
+          <dl class="facts reveal">
+            <div><dt>based in</dt><dd>Saharanpur, UP, India</dd></div>
+            <div><dt>currently</dt><dd>Software Engineer @ Ezentech</dd></div>
+            <div><dt>education</dt><dd>B.E. CSE · Chitkara University</dd></div>
+            <div><dt>focus</dt><dd>Full stack · APIs · applied ML</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED WORK ============ -->
+    <section class="section" id="work">
+      <div class="section__head">
+        <div>
+          <p class="label reveal">02 — selected work</p>
+          <h2 class="reveal">Things I've <span class="serif">built.</span></h2>
+        </div>
+        <p class="section__note reveal">Four projects, each shown with real screenshots, real code or real numbers.</p>
+      </div>
+
+      <!-- Case 01 — NewsLens · layout: lab report -->
+      <article class="case case--lab reveal" id="case-newslens">
+        <header class="lab__head">
+          <div>
+            <div class="case__top"><span class="case__num mono">01</span><span class="chip-live"><span class="pulse"></span>machine learning</span></div>
+            <h3>NewsLens</h3>
+            <p class="case__lede">An explainable news-topic classifier. Paste an article and it returns the topic, ranked probabilities and <b>the words that drove the decision</b> — served by a production-style FastAPI backend.</p>
+          </div>
+          <dl class="kpis">
+            <div><dt>test accuracy</dt><dd><span data-count="86">0</span>.4%</dd></div>
+            <div><dt>macro-F1</dt><dd>0.863</dd></div>
+            <div><dt>held-out docs</dt><dd>2,282</dd></div>
+            <div><dt>topics</dt><dd>6</dd></div>
+          </dl>
+        </header>
+
+        <div class="lab__grid">
+          <div class="lab__stage">
+            <div class="case__tabs" role="tablist" aria-label="NewsLens screens" id="labTabs">
+              <button class="is-active">/ app</button>
+              <button>/ explanation</button>
+              <button>/ docs</button>
+              <button>/ light mode</button>
+            </div>
+            <div class="browser">
+              <div class="browser__bar">
+                <span class="dots"><i></i><i></i><i></i></span>
+                <span class="browser__url"><svg width="10" height="10"><use href="#i-lock"/></svg><span id="labUrl">127.0.0.1:8000</span></span>
+              </div>
+              <div class="browser__view" id="labView">
+                <img src="assets/newslens-dark.jpg" alt="NewsLens app classifying a space article" class="is-on" loading="lazy" />
+                <img src="assets/newslens-result-dark.jpg" alt="Prediction with probabilities and keyword explanation" loading="lazy" class="contain" />
+                <img src="assets/newslens-docs.jpg" alt="Auto-generated Swagger API docs" loading="lazy" />
+                <img src="assets/newslens-light.jpg" alt="NewsLens in light mode" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          <div class="lab__side">
+            <div class="panel">
+              <h4 class="col__label mono">model selection · 5-fold CV macro-F1</h4>
+              <ul class="hbars">
+                <li><span>Logistic Regression</span><b style="--v:.864"><i></i></b><em>0.864</em></li>
+                <li><span>Linear SVM</span><b style="--v:.872"><i></i></b><em>0.872</em></li>
+                <li class="is-best"><span>Complement NB ★</span><b style="--v:.877"><i></i></b><em>0.877</em></li>
+              </ul>
+              <p class="panel__note mono">winner tuned with GridSearchCV (α = 0.3) · bars scaled 0.78 → 0.92</p>
+            </div>
+            <div class="panel">
+              <h4 class="col__label mono">per-class F1 · test set</h4>
+              <ul class="hbars hbars--sm">
+                <li><span>Baseball</span><b style="--v:.914"><i></i></b><em>0.91</em></li>
+                <li><span>Automobiles</span><b style="--v:.875"><i></i></b><em>0.87</em></li>
+                <li><span>Space</span><b style="--v:.872"><i></i></b><em>0.87</em></li>
+                <li><span>Medicine</span><b style="--v:.864"><i></i></b><em>0.86</em></li>
+                <li><span>Graphics</span><b style="--v:.832"><i></i></b><em>0.83</em></li>
+                <li><span>Politics</span><b style="--v:.822"><i></i></b><em>0.82</em></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="lab__row">
+          <div class="editor">
+            <div class="editor__bar"><span class="dots"><i></i><i></i><i></i></span><span class="editor__title mono">app/ml.py — keyword explainer</span></div>
+<pre class="code__py mono"><code><span class="k">def</span> <span class="f">_keywords</span>(self, row, class_idx: int, top_n: int) -&gt; list[dict]:
+    <span class="c">"""Terms in the input that pushed the prediction towards the class."""</span>
+    <span class="k">if</span> self._weights <span class="k">is None or</span> row.nnz == <span class="n">0</span>:
+        <span class="k">return</span> []
+    contrib = row.data * self._weights[class_idx, row.indices]
+    order = np.<span class="f">argsort</span>(contrib)[::-<span class="n">1</span>][:top_n]
+    <span class="k">return</span> [{<span class="s">"term"</span>: <span class="f">str</span>(self.vocabulary[row.indices[i]]),
+             <span class="s">"weight"</span>: <span class="f">round</span>(<span class="f">float</span>(contrib[i]), <span class="n">4</span>)}
+            <span class="k">for</span> i <span class="k">in</span> order <span class="k">if</span> contrib[i] &gt; <span class="n">0</span>]</code></pre>
+          </div>
+          <div class="panel api">
+            <h4 class="col__label mono">rest api · /api/v1</h4>
+            <ul>
+              <li><i class="get">GET</i>/health</li>
+              <li><i class="get">GET</i>/model</li>
+              <li><i class="post">POST</i>/predict</li>
+              <li><i class="post">POST</i>/predict/batch</li>
+              <li><i class="get">GET</i>/history</li>
+              <li><i class="del">DEL</i>/history</li>
+              <li><i class="get">GET</i>/stats</li>
+            </ul>
+          </div>
+          <button class="panel cm" data-lightbox="assets/newslens-confusion.png" data-title="NewsLens — confusion matrix (test set)" aria-label="Enlarge confusion matrix">
+            <h4 class="col__label mono">confusion matrix</h4>
+            <img src="assets/newslens-confusion.png" alt="Confusion matrix of the test set" loading="lazy" />
+          </button>
+        </div>
+
+        <div class="lab__foot">
+          <div class="tags">
+            <span>Python 3.12</span><span>scikit-learn</span><span>TF-IDF</span><span>FastAPI</span><span>Pydantic</span><span>SQLite</span><span>pytest</span><span>Docker</span><span>GitHub Actions CI</span>
+          </div>
+          <p class="mono dim">Batch inference · prediction history &amp; stats · non-root Docker image with healthcheck · tests run without downloading the dataset.</p>
+        </div>
+      </article>
+
+      <!-- Case 02 — AI legal assistant · layout: bento grid -->
+      <article class="case case--bento reveal" id="case-ai">
+        <div class="bento">
+          <div class="tile tile--intro">
+            <div class="case__top"><span class="case__num mono">02</span><span class="chip-live chip-live--muted">source on GitHub</span></div>
+            <h3>AI Legal Assistant</h3>
+            <p class="case__lede">A full-stack chatbot on the Google Gemini API — multi-turn chats with saved history, a prompt library and paid plans.</p>
+            <a class="btn btn--accent btn--sm" href="https://github.com/mittalmanvi27-cpu/ai-project" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>View source ↗</a>
+          </div>
+
+          <div class="tile tile--code">
+            <div class="editor">
+              <div class="editor__bar">
+                <span class="dots"><i></i><i></i><i></i></span>
+                <span class="editor__title mono">ai-project</span>
+                <span class="editor__branch mono">⎇ main</span>
+              </div>
+              <div class="editor__body">
+                <aside class="tree mono" aria-label="Real project structure">
+                  <p>src/</p>
+                  <p class="d1">app/</p>
+                  <p class="d2">ai/[chatId]/</p>
+                  <p class="d2">api/</p>
+                  <p class="d3">aimodel/gentext</p>
+                  <p class="d3">chat-history/</p>
+                  <p class="d3">custom-prompt/</p>
+                  <p class="d3">razorpay/</p>
+                  <p class="d3">auth/</p>
+                  <p class="d2">dashboard/</p>
+                  <p class="d1">models/</p>
+                  <p class="d1">utils/server/</p>
+                  <p class="d2 is-open">genAi.ts</p>
+                </aside>
+                <div class="code">
+                  <div class="code__tab mono"><span class="ts">TS</span>genAi.ts</div>
+<pre class="mono"><code><span class="k">import</span> { Content, GoogleGenerativeAI } <span class="k">from</span> <span class="s">"@google/generative-ai"</span>
+
+<span class="k">const</span> GENAI_MODEL_NAME = <span class="s">'gemini-2.0-flash'</span>;
+
+<span class="k">export function</span> <span class="f">generateTextResponse</span>(historyConversation: Content[]) {
+  <span class="k">return new</span> <span class="f">Promise</span>(<span class="k">async</span> (resolve, reject) =&gt; {
+    <span class="k">try</span> {
+      <span class="k">const</span> genAI = <span class="k">new</span> <span class="f">GoogleGenerativeAI</span>(GENAI_API_KEY);
+      <span class="k">const</span> model = genAI.<span class="f">getGenerativeModel</span>({
+        model: GENAI_MODEL_NAME,
+        systemInstruction: { role: <span class="s">"system"</span>, parts: [...] }
+      });
+      <span class="k">const</span> result = <span class="k">await</span> model.<span class="f">generateContent</span>({
+        contents: historyConversation
+      })
+      <span class="k">return</span> <span class="f">resolve</span>(result.response.<span class="f">text</span>());
+    } <span class="k">catch</span> (err) {
+      <span class="k">return</span> <span class="f">reject</span>(GENAI_ERROR);
+    }
+  })
+}</code></pre>
+                  <div class="code__foot mono"><span>src/utils/server/genAi.ts</span><span>from the real repo</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile tile--stack">
+            <h4 class="col__label mono">stack</h4>
+            <div class="tags">
+              <span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>Gemini 2.0 Flash</span><span>MongoDB</span><span>Mongoose</span><span>Tailwind</span><span>Framer Motion</span>
+            </div>
+          </div>
+
+          <div class="tile tile--flow">
+            <h4 class="col__label mono">architecture</h4>
+            <div class="arch">
+              <div class="arch__row">
+                <span class="arch__node">React chat UI</span>
+                <i class="arch__line"></i>
+                <span class="arch__node">/api/aimodel/gentext</span>
+                <i class="arch__line"></i>
+                <span class="arch__node arch__node--hl">Gemini 2.0 Flash</span>
+              </div>
+              <div class="arch__services">
+                <span class="arch__node">MongoDB<small>history · limits</small></span>
+                <span class="arch__node">WorkOS<small>auth</small></span>
+                <span class="arch__node">Razorpay<small>plans</small></span>
+                <span class="arch__node">Resend<small>email</small></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile tile--feat">
+            <b class="feat__big mono">20<small>/day</small></b>
+            <p>Prompt limit per user, reset daily and enforced on the server.</p>
+          </div>
+          <div class="tile tile--feat">
+            <b class="feat__big mono">PDF<small>+ Word</small></b>
+            <p>Answers export to documents for sharing.</p>
+          </div>
+          <div class="tile tile--feat">
+            <b class="feat__big mono">12</b>
+            <p>SEO landing pages for legal practice areas, with sitemaps.</p>
+          </div>
+          <div class="tile tile--feat">
+            <b class="feat__big mono">↺</b>
+            <p>Full chat history sent each turn — chats can be saved, renamed, deleted.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 03 — Ezentech · layout: metrics band + before/after table -->
+      <article class="case case--impact reveal" id="case-ezentech">
+        <header class="impact__head">
+          <div>
+            <div class="case__top"><span class="case__num mono">03</span><span class="chip-live chip-live--muted">Ezentech India · Sep 2025 — now</span></div>
+            <h3>Calibration &amp; Inspection Platforms</h3>
+          </div>
+          <dl class="impact__meta">
+            <div><dt>role</dt><dd>Software Engineer</dd></div>
+            <div><dt>scope</dt><dd>Frontend · backend · APIs</dd></div>
+            <div><dt>data</dt><dd>SQL · REST services</dd></div>
+            <div><dt>users</dt><dd>Operations &amp; quality teams</dd></div>
+          </dl>
+        </header>
+
+        <div class="impact__stats">
+          <div class="metric">
+            <span class="metric__label mono">missed calibration schedules</span>
+            <b class="metric__val"><span data-count="60">0</span>%<small>↓</small></b>
+            <div class="bar"><i style="--w:60%"></i></div>
+          </div>
+          <div class="metric">
+            <span class="metric__label mono">end-to-end processing time</span>
+            <b class="metric__val"><span data-count="55">0</span>%<small>↓</small></b>
+            <div class="bar"><i style="--w:55%"></i></div>
+          </div>
+          <div class="metric">
+            <span class="metric__label mono">record accuracy</span>
+            <b class="metric__val"><span data-count="40">0</span>%<small>↑</small></b>
+            <div class="bar"><i style="--w:40%"></i></div>
+          </div>
+        </div>
+
+        <div class="ba" role="table" aria-label="Before and after">
+          <div class="ba__row ba__row--head" role="row">
+            <span role="columnheader" class="mono">before</span><span aria-hidden="true"></span><span role="columnheader" class="mono">after — what I built</span>
+          </div>
+          <div class="ba__row" role="row"><span role="cell">Spreadsheet tracking</span><i aria-hidden="true">→</i><span role="cell"><b>REST API driven services</b> as the single source of records</span></div>
+          <div class="ba__row" role="row"><span role="cell">Missed calibration schedules</span><i aria-hidden="true">→</i><span role="cell"><b>Calibration monitoring app</b> with automated, system-generated alerts</span></div>
+          <div class="ba__row" role="row"><span role="cell">Paper-based quality checks</span><i aria-hidden="true">→</i><span role="cell"><b>Digital inspection system</b> with standardized capture across inspection points</span></div>
+          <div class="ba__row" role="row"><span role="cell">Manual data entry</span><i aria-hidden="true">→</i><span role="cell"><b>Removed</b> — data captured digitally at each inspection point</span></div>
+          <div class="ba__row" role="row"><span role="cell">Slow issue resolution</span><i aria-hidden="true">→</i><span role="cell"><b>Real-time dashboards</b> with automated notifications</span></div>
+        </div>
+        <p class="metrics__note mono">Internal tools — screenshots are confidential. Figures from production use.</p>
+      </article>
+      <!-- Case 04 — Ramaya Grand · layout: compact row -->
+      <article class="case case--compact reveal" id="case-ramaya">
+        <a class="compact__media" href="https://ramaya-ten.vercel.app" target="_blank" rel="noopener" aria-label="Open Ramaya Grand live site">
+          <div class="browser">
+            <div class="browser__bar">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="browser__url"><svg width="10" height="10"><use href="#i-lock"/></svg><span id="ramayaUrl">ramaya-ten.vercel.app</span></span>
+            </div>
+            <div class="browser__view" id="ramayaView">
+              <img src="assets/ramaya-home.jpg" alt="Ramaya Grand home page" class="is-on" loading="lazy" />
+              <img src="assets/ramaya-venues.jpg" alt="Venues page" loading="lazy" />
+              <img src="assets/ramaya-gastronomy.jpg" alt="Gastronomy page" loading="lazy" />
+            </div>
+          </div>
+        </a>
+        <div class="compact__info">
+          <div class="case__top"><span class="case__num mono">04</span><span class="chip-live"><span class="pulse"></span>live</span></div>
+          <h3>Ramaya Grand</h3>
+          <p class="case__lede">Multi-page Next.js site for a venue &amp; events brand — built solo from UI to deployment.</p>
+          <ul class="bullets">
+            <li>14 routes, event inquiry form, hero video and galleries.</li>
+            <li>Continuous deployment from GitHub to Vercel.</li>
+          </ul>
+          <div class="tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Vercel</span></div>
+          <div class="case__links">
+            <a class="btn btn--accent btn--sm" href="https://ramaya-ten.vercel.app" target="_blank" rel="noopener">Live site ↗</a>
+            <a class="btn btn--ghost btn--sm" href="https://github.com/mittalmanvi27-cpu/ramaya" target="_blank" rel="noopener"><svg width="14" height="14"><use href="#i-gh"/></svg>Source</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="section__head">
+        <div>
+          <p class="label reveal">03 — experience</p>
+          <h2 class="reveal">Where I've <span class="serif">worked.</span></h2>
+        </div>
+        <a class="section__note link-arrow reveal" href="assets/Manvi_Mittal_Resume.pdf" download>Full résumé (PDF) <span>↓</span></a>
+      </div>
+
+      <ol class="xp" id="timeline">
+        <li class="xp__item reveal">
+          <div class="xp__when mono"><span>Sep 2025</span><span>present</span></div>
+          <div class="xp__body">
+            <div class="xp__head"><h3>Software Engineer</h3><span class="xp__co">Ezentech India Pvt. Ltd.</span><span class="xp__loc mono">Saharanpur, IN</span></div>
+            <ul>
+              <li>Designed, built and shipped a calibration monitoring web app with automated alerts — <b>60%</b> fewer missed calibration schedules.</li>
+              <li>Replaced manual spreadsheet tracking with REST API services — <b>40%</b> better record accuracy, <b>55%</b> lower processing time.</li>
+              <li>Built a digital inspection system that replaced paper-based quality checks.</li>
+              <li>Real-time dashboards with automated notifications for operations teams.</li>
+              <li>Code reviews, debugging and production issue resolution across frontend and backend; tests and docs for shipped features.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="xp__item reveal">
+          <div class="xp__when mono"><span>Jun 2025</span><span>Aug 2025</span></div>
+          <div class="xp__body">
+            <div class="xp__head"><h3>Software Engineer</h3><span class="xp__co">Cloud Infotech</span><span class="xp__loc mono">India</span></div>
+            <ul>
+              <li>Implemented and tested features across distributed storage, indexing and querying components — improved query response time.</li>
+              <li>Turned ambiguous problem statements into scoped technical designs; extended existing services and optimized query paths.</li>
+              <li>Shipped reviewed, tested code every two-week Agile sprint with product and engineering teams.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <div class="skills reveal">
+        <div class="skill"><h4 class="mono">languages</h4><p>JavaScript · TypeScript · Python · Java · SQL · HTML5 · CSS3</p></div>
+        <div class="skill"><h4 class="mono">frontend</h4><p>React · Next.js · React Spectrum · Tailwind CSS · accessible, responsive UI</p></div>
+        <div class="skill"><h4 class="mono">backend &amp; apis</h4><p>Node.js · Express.js · FastAPI · REST API design · authentication</p></div>
+        <div class="skill"><h4 class="mono">databases</h4><p>MySQL · MongoDB · SQLite · schema design · indexing · query optimization</p></div>
+        <div class="skill"><h4 class="mono">machine learning</h4><p>scikit-learn · TF-IDF · model selection &amp; CV · explainability · Gemini API</p></div>
+        <div class="skill"><h4 class="mono">cloud &amp; deploy</h4><p>Azure · Docker · Vercel · Google Cloud fundamentals</p></div>
+        <div class="skill"><h4 class="mono">testing &amp; ci</h4><p>pytest · unit testing · GitHub Actions · Git-based CI/CD</p></div>
+        <div class="skill"><h4 class="mono">practices</h4><p>Agile / Scrum · code review · debugging · documentation</p></div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <div class="section__head">
+        <div>
+          <p class="label reveal">04 — education</p>
+          <h2 class="reveal">Where I <span class="serif">learned.</span></h2>
+        </div>
+        <p class="section__note reveal">Four years of computer science, plus the courses and trainings I took along the way.</p>
+      </div>
+
+      <article class="uni reveal">
+        <div class="uni__main">
+          <div class="uni__badge mono" aria-hidden="true">CU</div>
+          <p class="uni__kicker mono">bachelor of engineering · 2021 — 2025</p>
+          <h3 class="uni__name">Chitkara <span class="serif">University</span></h3>
+          <p class="uni__degree">B.E. in Computer Science &amp; Engineering</p>
+          <p class="uni__loc mono"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Himachal Pradesh, India</p>
+
+          <div class="years" aria-label="2021 to 2025">
+            <div class="years__track"><i></i></div>
+            <ol class="years__marks mono">
+              <li><b>2021</b><span>started B.E.</span></li>
+              <li><b>2022</b><span>DBMS cert</span></li>
+              <li><b>2023</b><span>JS · SE certs</span></li>
+              <li><b>2025</b><span>graduated</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="uni__side">
+          <div class="uni__block">
+            <h4 class="col__label mono">core coursework</h4>
+            <div class="course">
+              <span><i class="mono">01</i>Data Structures &amp; Algorithms</span>
+              <span><i class="mono">02</i>Database Management Systems</span>
+              <span><i class="mono">03</i>Operating Systems</span>
+              <span><i class="mono">04</i>Computer Networks</span>
+              <span><i class="mono">05</i>Object Oriented Programming</span>
+            </div>
+          </div>
+          <div class="uni__block">
+            <h4 class="col__label mono">during university</h4>
+            <ul class="bullets">
+              <li><b>Web Developer Intern</b> — Bharat Intern</li>
+              <li><b>Student Trainee</b> — Google Cloud (cloud fundamentals)</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <div class="edu__row">
+        <div class="panel school reveal">
+          <h4 class="col__label mono">school</h4>
+          <p class="school__name">Ram Krishna Mehta Inter College</p>
+          <p class="mono dim">Senior Secondary &amp; High School · 2018 — 2021</p>
+        </div>
+        <div class="panel certs reveal">
+          <h4 class="col__label mono">certifications</h4>
+          <ul>
+            <li><span>JavaScript</span><em class="mono">Apr 2023</em></li>
+            <li><span>Software Engineering</span><em class="mono">Feb 2023</em></li>
+            <li><span>Database Management Systems</span><em class="mono">Sep 2022</em></li>
+            <li><span>Introduction to Cybersecurity</span><em class="mono">Apr 2023</em></li>
+            <li><span>Introduction to Blockchain Technologies</span><em class="mono">Jan 2023</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PINBOARD ============ -->
+    <section class="section" id="pinboard">
+      <div class="section__head">
+        <div>
+          <p class="label reveal">05 — pinboard</p>
+          <h2 class="reveal">Screens <span class="serif">&amp;</span> notes.</h2>
+        </div>
+        <p class="section__note reveal">Real screens from my projects, plus the toolbox behind them. Click to enlarge, <span class="mono">★</span> to save.</p>
+      </div>
+      <div class="chips reveal" role="tablist" aria-label="Filter pins">
+        <button class="chip is-active" data-filter="all">all</button>
+        <button class="chip" data-filter="screens">screens</button>
+        <button class="chip" data-filter="toolbox">toolbox</button>
+        <button class="chip" data-filter="learning">learning</button>
+        <button class="chip" data-filter="saved">★ saved <span class="count" id="starCount">0</span></button>
+      </div>
+      <div class="masonry" id="masonry"><!-- rendered by script.js --></div>
+    </section>
+
+    <!-- ============ ASK AI ============ -->
+    <section class="section" id="ai">
+      <div class="section__head">
+        <div>
+          <p class="label reveal">06 — ask-ai</p>
+          <h2 class="reveal">Ask about <span class="serif">me.</span></h2>
+        </div>
+        <p class="section__note reveal">Short on time? Ask anything about my skills, projects or availability. Answers come straight from my résumé.</p>
+      </div>
+
+      <div class="ide reveal" id="chat">
+        <aside class="ide__side">
+          <p class="ide__label">TRY ASKING</p>
+          <div class="suggest" id="suggest">
+            <button><span>›</span>What's her tech stack?</button>
+            <button><span>›</span>Tell me about the calibration app</button>
+            <button><span>›</span>What AI projects has she built?</button>
+            <button><span>›</span>Is she open to work?</button>
+            <button><span>›</span>Where did she study?</button>
+          </div>
+          <div class="ide__model"><span class="pulse"></span><span class="mono">grounded in résumé</span></div>
+        </aside>
+        <div class="ide__main">
+          <div class="ide__tabs">
+            <span class="tab is-active"><i class="spark">✦</i> ask-manvi</span>
+            <span class="ide__status mono" id="chatStatus">● ready</span>
+          </div>
+          <div class="chat__log" id="chatLog" aria-live="polite"></div>
+          <form class="chat__form" id="chatForm" autocomplete="off">
+            <span class="chat__prompt mono">›</span>
+            <input id="chatInput" type="text" placeholder="Ask anything about Manvi…" aria-label="Your question" maxlength="300" />
+            <button type="submit" class="send" aria-label="Send"><span class="mono">⏎</span></button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <p class="label reveal">07 — contact</p>
+      <h2 class="contact__big reveal">Let's build<br/><span class="serif">something</span> good.</h2>
+      <div class="copy reveal">
+        <a href="mailto:manviamittal7@gmail.com" class="copy__mail">manviamittal7@gmail.com</a>
+        <button class="copy__btn" id="copyBtn" aria-label="Copy email"><span class="mono" id="copyLabel">copy</span></button>
+      </div>
+      <div class="links reveal">
+        <a class="link" href="https://github.com/mittalmanvi27-cpu" target="_blank" rel="noopener"><small>github</small><span>mittalmanvi27-cpu</span><i>↗</i></a>
+        <a class="link" href="https://linkedin.com/in/mittalmanvi" target="_blank" rel="noopener"><small>linkedin</small><span>in/mittalmanvi</span><i>↗</i></a>
+        <a class="link" href="assets/Manvi_Mittal_Resume.pdf" download><small>résumé</small><span>Manvi_Mittal_Resume.pdf</span><i>↓</i></a>
+        <a class="link" href="tel:+919317942591"><small>phone</small><span>+91 93179 42591</span><i>↗</i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span id="year"></span> Manvi Mittal · Saharanpur, India</span>
+    <span class="dim">hand-coded in HTML, CSS &amp; JS</span>
+    <a href="#top">back to top ↑</a>
+  </footer>
+
+  <!-- Lightbox / pin modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Close"><span class="mono">esc</span></button>
+      <div class="modal__media" id="modalMedia"></div>
+      <div class="modal__body">
+        <p class="label" id="modalKicker"></p>
+        <h3 id="modalTitle"></h3>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#ai" class="fab magnetic" aria-label="Ask about me"><span class="spark">✦</span>ask ai</a>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

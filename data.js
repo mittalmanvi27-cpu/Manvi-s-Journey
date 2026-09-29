@@ -1,0 +1,70 @@
+// All portfolio content lives here — edit this file to update the site.
+
+window.PROFILE = {
+  name: "Manvi Mittal",
+  role: "Full Stack Software Engineer",
+  location: "Saharanpur, Uttar Pradesh, India",
+  email: "manviamittal7@gmail.com",
+  phone: "+91 9317942591",
+  linkedin: "https://linkedin.com/in/mittalmanvi",
+  github: "https://github.com/mittalmanvi27-cpu",
+  live: "https://ramaya-ten.vercel.app",
+};
+
+// Pinboard. Screens are real screenshots in assets/.
+// type "shot": img + url (live: true if publicly reachable) | type "note": text card
+window.PINS = [
+  { id: "nl-app", cat: "screens", type: "shot", project: "newslens", img: "assets/newslens-dark.jpg", w: 2160, h: 1350, url: "127.0.0.1:8000", title: "NewsLens — classifier UI", note: "A space article classified at 95% confidence, with the model's live KPIs above." },
+  { id: "stack", cat: "toolbox", type: "note", title: "Daily stack", kicker: "toolbox", items: ["React", "Next.js", "TypeScript", "Node.js", "Express", "MySQL", "Tailwind"] },
+  { id: "nl-mobile", cat: "screens", type: "shot", project: "newslens", img: "assets/newslens-mobile.jpg", w: 780, h: 1688, url: "127.0.0.1:8000", title: "NewsLens on mobile", note: "Responsive single-page UI with no build step.", tall: true },
+  { id: "rg-home", cat: "screens", type: "shot", project: "ramaya grand", live: true, img: "assets/ramaya-home.jpg", w: 2160, h: 1350, url: "ramaya-ten.vercel.app", title: "Ramaya Grand — home", note: "Full-bleed hero video with serif display type." },
+  { id: "nl-explain", cat: "screens", type: "shot", project: "newslens", img: "assets/newslens-result-dark.jpg", w: 1740, h: 924, url: "127.0.0.1:8000", title: "Why this prediction?", note: "Ranked probabilities plus the terms that pushed the model toward the topic (TF-IDF × class weight)." },
+  { id: "ml", cat: "toolbox", type: "note", title: "ML toolkit", kicker: "machine learning", items: ["Python", "scikit-learn", "TF-IDF", "GridSearchCV", "FastAPI", "pytest"] },
+  { id: "nl-docs", cat: "screens", type: "shot", project: "newslens", img: "assets/newslens-docs.jpg", w: 2160, h: 1350, url: "127.0.0.1:8000/docs", title: "API docs", note: "Versioned /api/v1 routes with auto-generated Swagger docs." },
+  { id: "rg-mobile", cat: "screens", type: "shot", project: "ramaya grand", live: true, img: "assets/ramaya-mobile.jpg", w: 780, h: 1688, url: "ramaya-ten.vercel.app", title: "Ramaya Grand on mobile", note: "Same hero, re-composed for phones with a slide-out menu.", tall: true },
+  { id: "nl-cm", cat: "screens", type: "shot", project: "newslens", img: "assets/newslens-confusion.png", w: 1200, h: 1050, url: "confusion_matrix.png", title: "Confusion matrix", note: "Test-set predictions for all 6 topics — the diagonal is correct." },
+  { id: "nl-light", cat: "screens", type: "shot", project: "newslens", img: "assets/newslens-light.jpg", w: 2160, h: 1350, url: "127.0.0.1:8000", title: "NewsLens — light mode", note: "Theme toggle with the same result view." },
+  { id: "cloud", cat: "toolbox", type: "note", title: "Ship it", kicker: "cloud & deploy", items: ["Vercel", "Docker", "Azure", "GitHub Actions", "Google Cloud"] },
+  { id: "rg-venues", cat: "screens", type: "shot", project: "ramaya grand", live: true, img: "assets/ramaya-venues.jpg", w: 2160, h: 1350, url: "ramaya-ten.vercel.app/venues", title: "Ramaya Grand — venues", note: "Three city houses, each with its own section." },
+  { id: "cs", cat: "learning", type: "note", title: "Foundations", kicker: "computer science", items: ["Data Structures", "Algorithms", "OOP", "System Design", "Distributed Systems"] },
+];
+
+// Knowledge base for the local AI assistant (used when no Gemini backend is available).
+window.KB = [
+  { k: ["machine learning", "ml", "newslens", "classifier", "model", "scikit", "python", "nlp", "data science"],
+    a: "Her ML project <b>NewsLens</b> classifies news into 6 topics with an explainable <b>TF-IDF + Complement Naive Bayes</b> model — <b>86.4% test accuracy</b>, macro-F1 0.863 on 2,282 held-out documents. She compared 3 models with 5-fold CV, tuned the best with GridSearchCV, and served it through a <b>FastAPI</b> backend with SQLite history, pytest, Docker and GitHub Actions CI." },
+  { k: ["stack", "tech", "skill", "language", "technolog", "tools", "know"],
+    a: "Manvi works across the stack: <b>JavaScript, TypeScript, Java, Python and SQL</b>. Frontend with <b>React, Next.js and Tailwind</b>; backend with <b>Node.js, Express and REST APIs</b>; data in <b>MySQL</b>; and deploys with <b>Vercel, Docker and Azure</b>." },
+  { k: ["calibration", "ezentech", "current", "job", "now", "present"],
+    a: "At <b>Ezentech India</b> (Sep 2025 – present) she designed and shipped a calibration monitoring app with automated alerts — <b>60% fewer missed calibrations</b>. Moving from spreadsheets to REST-API services gave <b>40% better accuracy</b> and <b>55% faster processing</b>." },
+  { k: ["inspection", "paper", "quality"],
+    a: "She built a <b>digital inspection system</b> that replaced paper-based quality checks, standardizing data capture across inspection points and removing manual data entry." },
+  { k: ["dashboard", "real time", "realtime", "notification"],
+    a: "She developed <b>real-time dashboards with automated notifications</b> that shortened average issue resolution time for operations teams." },
+  { k: ["cloud infotech", "distributed", "intern", "previous", "before"],
+    a: "At <b>Cloud Infotech</b> (Jun – Aug 2025) she implemented and tested features across distributed storage, indexing and querying components, improving query response time, in two-week Agile sprints." },
+  { k: ["ai", "ai project", "artificial intelligence", "gemini", "chatbot", "llm", "legal"],
+    a: "She built a <b>full-stack AI legal assistant</b> on <b>Gemini 2.0 Flash</b> with Next.js 15 and TypeScript — saved multi-turn chat history in MongoDB, a prompt library, a 20-prompts-per-day limit, PDF/Word export and Razorpay plans. <a href='https://github.com/mittalmanvi27-cpu/ai-project' target='_blank' rel='noopener'>Source ↗</a>" },
+  { k: ["ramaya", "venue", "website", "live site", "next.js project"],
+    a: "<b>Ramaya Grand</b> is a luxury venue & events website she built end to end with Next.js, React and TypeScript — inquiry form, hero video, galleries, and CI/CD on Vercel. <a href='https://ramaya-ten.vercel.app' target='_blank' rel='noopener'>See it live ↗</a>" },
+  { k: ["project", "portfolio", "built", "work sample"],
+    a: "Highlights: <b>NewsLens</b> (explainable ML classifier, 86.4% accuracy), <b>Ramaya Grand</b> (live Next.js site), an <b>AI legal assistant</b> on Gemini, a <b>calibration monitoring platform</b>, a <b>digital inspection system</b> and <b>real-time dashboards</b>. See the <b>Selected work</b> section for screenshots and code." },
+  { k: ["educat", "degree", "college", "university", "study", "chitkara"],
+    a: "She holds a <b>B.E. in Computer Science & Engineering</b> from <b>Chitkara University</b> (2021 – 2025), with coursework in DSA, DBMS, OS, Computer Networks and OOP." },
+  { k: ["cert", "course", "training"],
+    a: "Certifications in JavaScript, Software Engineering, DBMS, Intro to Cybersecurity and Intro to Blockchain — plus a Web Developer internship at Bharat Intern and Google Cloud student training." },
+  { k: ["experience", "years", "how long"],
+    a: "She has <b>1+ year</b> of professional experience shipping production web apps and REST APIs — currently at Ezentech India, previously at Cloud Infotech." },
+  { k: ["hire", "open", "available", "availability", "relocat", "remote", "role", "opportunit"],
+    a: "Yes — Manvi is <b>open to full-stack / frontend / backend engineering roles</b>. The quickest way to reach her is <a href='mailto:manviamittal7@gmail.com'>manviamittal7@gmail.com</a>." },
+  { k: ["contact", "email", "phone", "reach", "linkedin", "github"],
+    a: "Email <a href='mailto:manviamittal7@gmail.com'>manviamittal7@gmail.com</a>, call <b>+91 93179 42591</b>, or find her on <a href='https://linkedin.com/in/mittalmanvi' target='_blank' rel='noopener'>LinkedIn</a> and <a href='https://github.com/mittalmanvi27-cpu' target='_blank' rel='noopener'>GitHub</a>." },
+  { k: ["where", "location", "based", "live"],
+    a: "She's based in <b>Saharanpur, Uttar Pradesh, India</b>." },
+  { k: ["database", "sql", "mysql"],
+    a: "Strong with <b>MySQL</b> — schema design, indexing and query optimization — and she has optimized query paths on distributed storage systems." },
+  { k: ["hello", "hi", "hey", "namaste"],
+    a: "Hi there! 👋 I'm Manvi's AI twin. Ask me about her skills, projects, experience or how to get in touch." },
+  { k: ["why", "strength", "best", "good fit", "stand out"],
+    a: "She ships measurable impact early in her career (60% / 55% / 40% improvements), owns work end to end from UI to deployment, and has solid CS fundamentals in DSA, databases and distributed systems." },
+];
