@@ -172,7 +172,7 @@
       $("#modalContent").innerHTML = `
         ${p.note ? `<p>${p.note}</p>` : ""}
         <div class="modal__url">${p.url}</div>
-        ${p.live ? `<a class="btn btn--accent btn--sm" href="https://${p.url}" target="_blank" rel="noopener">Open live page ↗</a>` : `<span class="mono dim" style="font-size:12px">running locally · FastAPI</span>`}
+        ${p.live ? `<a class="btn btn--accent btn--sm" href="https://${p.url}" target="_blank" rel="noopener">Open live page ↗</a>` : `<a class="btn btn--accent btn--sm" href="https://github.com/mittalmanvi27-cpu/news-classifier" target="_blank" rel="noopener">View source ↗</a>`}
         <div class="modal__nav"><button data-step="-1">← prev</button><button data-step="1">next →</button><span class="mono dim" style="margin-left:auto;font-size:12px;align-self:center">${idx + 1} / ${list.length}</span></div>`;
     }
     modal.classList.add("is-open");
